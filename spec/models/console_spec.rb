@@ -12,7 +12,7 @@ RSpec.describe Console, type: :model do
     end
 
     it 'manufacturer consegue ser preenchido?' do
-      @console.manufacturer = ''
+      @console.manufacturer = 'sony'
       expect(@console.manufacturer).to eq('sony') # espera que manufacturer seja igual a sony
     end
 
