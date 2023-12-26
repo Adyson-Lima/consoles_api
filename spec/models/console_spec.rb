@@ -21,8 +21,8 @@ RSpec.describe Console, type: :model do
   describe 'Testes de validação de campos de um objeto console' do
 
     it 'objeto console valido com campos obrigatórios preenchidos?' do
-      @console.name = ''
-      @console.manufacturer = ''
+      @console.name = 'xbox'
+      @console.manufacturer = 'microsoft'
       expect(@console).to be_valid
     end
 
