@@ -11,6 +11,11 @@ RSpec.describe Console, type: :model do
       expect(@console.name).to eq('ps5') # espera que name seja igual a ps5
     end
 
+    it 'manufacturer consegue ser preenchido?' do
+      @console.manufacturer = ''
+      expect(@console.manufacturer).to eq('sony') # espera que manufacturer seja igual a sony
+    end
+
   end
 
 end
