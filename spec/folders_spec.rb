@@ -4,4 +4,8 @@ RSpec.describe 'testes de verificação de existencia de pastas' do
     expect(Dir.exist?('spec/models')).to eq(true)
   end
 
+  it 'a pasta spec/controllers existe?' do
+    expect(Dir.exist?('spec/controllers')).to eq(true)
+  end
+
 end
