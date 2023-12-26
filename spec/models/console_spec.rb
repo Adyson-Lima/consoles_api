@@ -26,6 +26,11 @@ RSpec.describe Console, type: :model do
       expect(@console).to be_valid
     end
 
+    it 'objeto console invalido com campos obrigatórios não preenchidos?' do
+      console = Console.new # campos name e manufacturer não preenchidos
+      expect(console).to be_valid
+    end
+
   end
 
 end
