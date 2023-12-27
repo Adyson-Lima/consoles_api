@@ -24,6 +24,15 @@ RSpec.describe Api::V1::ConsolesController, type: :controller do
     it 'Consegue criar um console e retornar status 201?' do
       post :create, params: {console: {name: 'mega-drive', manufacturer: 'sega'}, format: :json}
       expect(response.body).to include_json(name: 'mega-drive')
+      expect(response).to have_http_status(201)
+    end
+  end
+
+  describe 'PATCH /api/v1/consoles/id' do
+    it 'Consegue atualizar um console retornar status 200?' do
+      console = Console.last
+      patch :update, params: {console: {name: 'dreamcast', manufacturer: 'sega'}, id: console.id}
+      expect(response.body).to include_json(name: 'dreamcast')
     end
   end
 

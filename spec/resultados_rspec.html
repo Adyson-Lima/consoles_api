@@ -287,62 +287,89 @@ a {
 <div id="div_group_2" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">GET /api/v1/consoles</dt>
-    <script type="text/javascript">moveProgressBar('9.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os consoles e retornar status 200?</span><span class='duration'>0.04803s</span></dd>
+    <script type="text/javascript">moveProgressBar('8.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os consoles e retornar status 200?</span><span class='duration'>0.05566s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">GET /api/v1/consoles/id</dt>
-    <script type="text/javascript">moveProgressBar('18.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar um console especifico e retornar status 200?</span><span class='duration'>0.00625s</span></dd>
+    <script type="text/javascript">moveProgressBar('16.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar um console especifico e retornar status 200?</span><span class='duration'>0.00839s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">POST /api/v1/consoles</dt>
-    <script type="text/javascript">moveProgressBar('27.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue criar um console e retornar status 201?</span><span class='duration'>0.01997s</span></dd>
+    <script type="text/javascript">moveProgressBar('25.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">Consegue criar um console e retornar status 201?</span><span class='duration'>0.01063s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_5" class="passed">testes de verificação de existencia de pastas</dt>
-    <script type="text/javascript">moveProgressBar('36.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta spec/models existe?</span><span class='duration'>0.00112s</span></dd>
-    <script type="text/javascript">moveProgressBar('45.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta spec/controllers existe?</span><span class='duration'>0.00085s</span></dd>
-    <script type="text/javascript">moveProgressBar('54.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api existe?</span><span class='duration'>0.00086s</span></dd>
-    <script type="text/javascript">moveProgressBar('63.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00111s</span></dd>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_5" class="passed">PATCH /api/v1/consoles/id</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_5');</script>
+    <script type="text/javascript">makeRed('example_group_5');</script>
+    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">Consegue atualizar um console retornar status 200?</span>
+      <span class="duration">0.00694s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: patch :update, params: {console: {name: &#39;dreamcast&#39;, manufacturer: &#39;sega&#39;}, id: console.id}
+
+  AbstractController::ActionNotFound:
+    The action &#39;update&#39; could not be found for Api::V1::ConsolesController
+  # ./spec/controllers/consoles_controller_v1_spec.rb:34:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>./spec/controllers/consoles_controller_v1_spec.rb:34:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">32</span>    it 'Consegue atualizar um console retornar status 200?' do
+<span class="linenum">33</span>      console = Console.last
+<span class="offending"><span class="linenum">34</span>      patch :update, params: {console: {name: 'dreamcast', manufacturer: 'sega'}, id: console.id}</span>
+<span class="linenum">35</span>      expect(response.body).to include_json(name: 'dreamcast')
+<span class="linenum">36</span>    end
+<span class="linenum">37</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
   <dl style="margin-left: 0px;">
-  <dt id="example_group_6" class="passed">Console</dt>
+  <dt id="example_group_6" class="passed">testes de verificação de existencia de pastas</dt>
+    <script type="text/javascript">moveProgressBar('41.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">a pasta spec/models existe?</span><span class='duration'>0.00112s</span></dd>
+    <script type="text/javascript">moveProgressBar('50.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">a pasta spec/controllers existe?</span><span class='duration'>0.00098s</span></dd>
+    <script type="text/javascript">moveProgressBar('58.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api existe?</span><span class='duration'>0.00166s</span></dd>
+    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00100s</span></dd>
   </dl>
 </div>
 <div id="div_group_7" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_7" class="passed">Testes de preenchimento de campos de um objeto console</dt>
-    <script type="text/javascript">moveProgressBar('72.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.00153s</span></dd>
-    <script type="text/javascript">moveProgressBar('81.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">manufacturer consegue ser preenchido?</span><span class='duration'>0.00090s</span></dd>
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_7" class="passed">Console</dt>
   </dl>
 </div>
 <div id="div_group_8" class="example_group passed">
   <dl style="margin-left: 15px;">
-  <dt id="example_group_8" class="passed">Testes de validação de campos de um objeto console</dt>
-    <script type="text/javascript">moveProgressBar('90.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">objeto console valido com campos obrigatórios preenchidos?</span><span class='duration'>0.00101s</span></dd>
-    <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">objeto console invalido com campos obrigatórios não preenchidos?</span><span class='duration'>0.00203s</span></dd>
+  <dt id="example_group_8" class="passed">Testes de preenchimento de campos de um objeto console</dt>
+    <script type="text/javascript">moveProgressBar('75.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.00110s</span></dd>
+    <script type="text/javascript">moveProgressBar('83.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">manufacturer consegue ser preenchido?</span><span class='duration'>0.00140s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.08959 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "11 examples, 0 failures";</script>
+<div id="div_group_9" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_9" class="passed">Testes de validação de campos de um objeto console</dt>
+    <script type="text/javascript">moveProgressBar('91.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">objeto console valido com campos obrigatórios preenchidos?</span><span class='duration'>0.00118s</span></dd>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">objeto console invalido com campos obrigatórios não preenchidos?</span><span class='duration'>0.00275s</span></dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.11951 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "12 examples, 1 failure";</script>
 </div>
 </div>
 </body>
