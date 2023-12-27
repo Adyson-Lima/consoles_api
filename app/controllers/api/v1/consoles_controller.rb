@@ -34,6 +34,11 @@ class Api::V1::ConsolesController < ApplicationController
     end
   end
 
+  # exclui um registro do banco
+  def destroy
+    @console.destroy!
+  end
+
 
 # funções privadas
 private

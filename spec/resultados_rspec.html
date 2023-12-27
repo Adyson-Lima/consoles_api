@@ -288,68 +288,48 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">GET /api/v1/consoles</dt>
     <script type="text/javascript">moveProgressBar('7.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os consoles e retornar status 200?</span><span class='duration'>0.04898s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os consoles e retornar status 200?</span><span class='duration'>0.05175s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">GET /api/v1/consoles/id</dt>
     <script type="text/javascript">moveProgressBar('15.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar um console especifico e retornar status 200?</span><span class='duration'>0.00733s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar um console especifico e retornar status 200?</span><span class='duration'>0.00723s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">POST /api/v1/consoles</dt>
     <script type="text/javascript">moveProgressBar('23.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue criar um console e retornar status 201?</span><span class='duration'>0.00982s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue criar um console e retornar status 201?</span><span class='duration'>0.00869s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_5" class="passed">PATCH /api/v1/consoles/id</dt>
     <script type="text/javascript">moveProgressBar('30.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue atualizar um console retornar status 200?</span><span class='duration'>0.01037s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue atualizar um console retornar status 200?</span><span class='duration'>0.00870s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_6" class="passed">DELETE /api/v1/consoles/id</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_6');</script>
-    <script type="text/javascript">makeRed('example_group_6');</script>
     <script type="text/javascript">moveProgressBar('38.4');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">Consegue excluir um console e retornar status 204?</span>
-      <span class="duration">0.00549s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: delete :destroy, params: {id: console.id}
-
-  AbstractController::ActionNotFound:
-    The action &#39;destroy&#39; could not be found for Api::V1::ConsolesController
-  # ./spec/controllers/consoles_controller_v1_spec.rb:43:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/controllers/consoles_controller_v1_spec.rb:43:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">41</span>    it 'Consegue excluir um console e retornar status 204?' do
-<span class="linenum">42</span>      console = Console.last
-<span class="offending"><span class="linenum">43</span>      delete :destroy, params: {id: console.id}</span>
-<span class="linenum">44</span>      expect(Console.all).not_to include(console)
-<span class="linenum">45</span>    end
-<span class="linenum">46</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue excluir um console e retornar status 204?</span><span class='duration'>0.01360s</span></dd>
   </dl>
 </div>
 <div id="div_group_7" class="example_group passed">
   <dl style="margin-left: 0px;">
   <dt id="example_group_7" class="passed">testes de verificação de existencia de pastas</dt>
     <script type="text/javascript">moveProgressBar('46.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta spec/models existe?</span><span class='duration'>0.00082s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">a pasta spec/models existe?</span><span class='duration'>0.00102s</span></dd>
     <script type="text/javascript">moveProgressBar('53.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta spec/controllers existe?</span><span class='duration'>0.00057s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">a pasta spec/controllers existe?</span><span class='duration'>0.00082s</span></dd>
     <script type="text/javascript">moveProgressBar('61.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api existe?</span><span class='duration'>0.00058s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api existe?</span><span class='duration'>0.00072s</span></dd>
     <script type="text/javascript">moveProgressBar('69.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00056s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">a pasta app/controllers/api/v1 existe?</span><span class='duration'>0.00072s</span></dd>
   </dl>
 </div>
 <div id="div_group_8" class="example_group passed">
@@ -361,22 +341,22 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_9" class="passed">Testes de preenchimento de campos de um objeto console</dt>
     <script type="text/javascript">moveProgressBar('76.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.00411s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.00132s</span></dd>
     <script type="text/javascript">moveProgressBar('84.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">manufacturer consegue ser preenchido?</span><span class='duration'>0.00097s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">manufacturer consegue ser preenchido?</span><span class='duration'>0.00134s</span></dd>
   </dl>
 </div>
 <div id="div_group_10" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_10" class="passed">Testes de validação de campos de um objeto console</dt>
     <script type="text/javascript">moveProgressBar('92.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">objeto console valido com campos obrigatórios preenchidos?</span><span class='duration'>0.00130s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">objeto console valido com campos obrigatórios preenchidos?</span><span class='duration'>0.00101s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">objeto console invalido com campos obrigatórios não preenchidos?</span><span class='duration'>0.00187s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">objeto console invalido com campos obrigatórios não preenchidos?</span><span class='duration'>0.00275s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.12721 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "13 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.10629 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "13 examples, 0 failures";</script>
 </div>
 </div>
 </body>
