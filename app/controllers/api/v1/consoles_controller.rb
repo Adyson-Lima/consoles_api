@@ -15,6 +15,16 @@ class Api::V1::ConsolesController < ApplicationController
     render json: @console
   end
 
+  # cria um console no banco
+  def create
+    @console = Console.new(console_params)
+    if @console.save
+      render json: @console, status: :created, location: api_v1_console_url(@console)
+    else
+      render json: @console.errors, status: :unprocessable_entity
+    end
+  end
+
 
 # funções privadas
 private
