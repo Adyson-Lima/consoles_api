@@ -33,6 +33,15 @@ RSpec.describe Api::V1::ConsolesController, type: :controller do
       console = Console.last
       patch :update, params: {console: {name: 'dreamcast', manufacturer: 'sega'}, id: console.id}
       expect(response.body).to include_json(name: 'dreamcast')
+      expect(response).to have_http_status(200)
+    end
+  end
+
+  describe 'DELETE /api/v1/consoles/id' do
+    it 'Consegue excluir um console e retornar status 204?' do
+      console = Console.last
+      delete :destroy, params: {id: console.id}
+      expect(Console.all).not_to include(console)
     end
   end
 
