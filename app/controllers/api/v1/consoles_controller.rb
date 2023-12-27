@@ -10,6 +10,11 @@ class Api::V1::ConsolesController < ApplicationController
     render json: @consoles
   end
 
+  # retorna um registro específico identificado pelo id na requisição
+  def show
+    render json: @console
+  end
+
 
 # funções privadas
 private
