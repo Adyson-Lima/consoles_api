@@ -10,7 +10,7 @@ class Api::V1::ConsolesController < ApplicationController
     render json: @consoles
   end
 
-  # retorna um registro específico identificado pelo id na requisição
+  # retorna um console específico identificado pelo id na requisição
   def show
     render json: @console
   end
@@ -20,6 +20,15 @@ class Api::V1::ConsolesController < ApplicationController
     @console = Console.new(console_params)
     if @console.save
       render json: @console, status: :created, location: api_v1_console_url(@console)
+    else
+      render json: @console.errors, status: :unprocessable_entity
+    end
+  end
+
+  # atualiza um console no banco
+  def update
+    if @console.update(console_params)
+      render json: @console
     else
       render json: @console.errors, status: :unprocessable_entity
     end
