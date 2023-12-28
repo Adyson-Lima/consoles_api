@@ -1,3 +1,4 @@
+# gera 5 registros no banco
 puts 'gerando consoles...'
 5.times do
   Console.create(name: ['ps3', 'ps4', 'ps5'].sample, manufacturer: 'sony')
